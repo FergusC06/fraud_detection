@@ -68,11 +68,12 @@ print(response.json())
   };
 
   return (
-    <div className="min-h-screen bg-slate-900 text-slate-100 p-8">
-      {/* Header */}
-      <div className="mb-10">
+    <div className="min-h-screen bg-slate-950 text-slate-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Header */}
+        <div className="mb-10">
         <h1 className="text-3xl font-bold flex items-center gap-3">
-          <Code2 className="text-blue-500" /> API Integration Guide
+          <Code2 className="text-cyan-400" /> API Integration Guide
         </h1>
         <p className="text-slate-400 mt-2">Learn how to connect your backend to the FraudShield AI Engine.</p>
       </div>
@@ -86,7 +87,7 @@ print(response.json())
               <Terminal className="text-slate-400" size={20} /> Authentication
             </h2>
             <p className="text-sm text-slate-400 mb-4">
-              All requests to the FraudShield API must be authenticated via the <code className="text-blue-400 bg-slate-900 px-1 py-0.5 rounded">X-API-KEY</code> header. You can generate this key in the Developer Settings page.
+              All requests to the FraudShield API must be authenticated via the <code className="text-cyan-400 bg-slate-900 px-1 py-0.5 rounded">X-API-KEY</code> header. You can generate this key in the Developer Settings page.
             </p>
           </div>
 
@@ -116,7 +117,7 @@ print(response.json())
                 onClick={() => setActiveTab(tab)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   activeTab === tab 
-                    ? 'bg-blue-600 text-white' 
+                    ? 'bg-cyan-500 text-white' 
                     : 'bg-slate-700 text-slate-400 hover:text-white hover:bg-slate-600'
                 }`}
               >
@@ -142,6 +143,7 @@ print(response.json())
 
       </div>
     </div>
+  </div>
   );
 };
 

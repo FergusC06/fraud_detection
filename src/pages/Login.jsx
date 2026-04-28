@@ -29,13 +29,13 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
-      <div className="max-w-md w-full space-y-8 p-10 bg-slate-800 rounded-2xl border border-slate-700 shadow-2xl">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 px-4 py-10">
+      <div className="max-w-md w-full space-y-8 p-10 glass-card">
         
         {/* Header Section */}
         <div className="text-center">
           <div className="flex justify-center">
-            <ShieldCheck className="h-14 w-14 text-blue-500" />
+            <ShieldCheck className="h-14 w-14 text-cyan-400" />
           </div>
           <h2 className="mt-6 text-3xl font-extrabold text-white">FraudShield</h2>
           <p className="mt-2 text-sm text-slate-400">Merchant Dashboard Access</p>
@@ -51,7 +51,7 @@ const Login = () => {
               <input
                 type="email"
                 required
-                className="appearance-none rounded-lg relative block w-full px-12 py-3 border border-slate-600 bg-slate-700 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
+                className="appearance-none rounded-lg relative block w-full px-12 py-3 border border-slate-600 bg-slate-700 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-colors"
                 placeholder="Email address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -64,7 +64,7 @@ const Login = () => {
               <input
                 type="password"
                 required
-                className="appearance-none rounded-lg relative block w-full px-12 py-3 border border-slate-600 bg-slate-700 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
+                className="appearance-none rounded-lg relative block w-full px-12 py-3 border border-slate-600 bg-slate-700 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-colors"
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -75,7 +75,7 @@ const Login = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 focus:ring-blue-500 transition-all shadow-lg hover:shadow-blue-500/30"
+            className="w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-cyan-500 hover:bg-cyan-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 focus:ring-cyan-400 transition-all shadow-lg shadow-cyan-500/20"
           >
             Sign in
           </button>
@@ -85,7 +85,7 @@ const Login = () => {
         <div className="text-center mt-6 pt-6 border-t border-slate-700">
           <p className="text-sm text-slate-400">
             New Organization?{' '}
-            <Link to="/register-merchant" className="text-blue-400 hover:text-blue-300 font-medium transition-colors">
+            <Link to="/register-merchant" className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors">
               Register here
             </Link>
           </p>

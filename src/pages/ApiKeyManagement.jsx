@@ -32,11 +32,12 @@ const ApiKeyManagement = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-900 text-slate-100 p-8">
-      {/* Header */}
-      <div className="mb-10">
+    <div className="min-h-screen bg-slate-950 text-slate-100">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Header */}
+        <div className="mb-10">
         <h1 className="text-3xl font-bold flex items-center gap-3">
-          <Key className="text-blue-500" /> Developer Settings
+          <Key className="text-cyan-400" /> Developer Settings
         </h1>
         <p className="text-slate-400 mt-2">Manage your organization's API credentials.</p>
       </div>
@@ -121,7 +122,7 @@ const ApiKeyManagement = () => {
                     </code>
                     <button
                       onClick={copyToClipboard}
-                      className="p-3 bg-blue-600 hover:bg-blue-700 text-white rounded transition"
+                      className="p-3 bg-cyan-500 hover:bg-cyan-400 text-white rounded transition shadow-lg shadow-cyan-500/20"
                       title="Copy to clipboard"
                     >
                       <Copy size={20} />
@@ -142,6 +143,7 @@ const ApiKeyManagement = () => {
 
       </div>
     </div>
+  </div>
   );
 };
 

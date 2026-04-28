@@ -21,7 +21,7 @@ const Dashboard = () => {
     fetchDashboard();
   }, []);
 
-  if (!data) return <div className="p-8 text-white min-h-screen flex justify-center items-center">Loading Dashboard Data...</div>;
+  if (!data) return <div className="p-8 text-white min-h-screen flex justify-center items-center bg-slate-950">Loading Dashboard Data...</div>;
 
   // 1. Calculate the Pie Chart Data
   const approvedCount = data.statistics.total_transactions - data.statistics.total_blocked - data.statistics.total_flagged_for_review;
@@ -40,39 +40,39 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="p-8">
-      
-      {/* Header */}
+    <div className="max-w-7xl mx-auto space-y-10">
+      <div className="rounded-3xl bg-slate-900/80 border border-slate-800 shadow-[0_30px_80px_-40px_rgba(15,23,42,0.9)] p-8">
+        {/* Header */}
       <div className="mb-10">
         <h1 className="text-3xl font-bold">Merchant: {data.merchant_name}</h1>
         <p className="text-slate-400 mt-1">Real-time Fraud Monitoring</p>
       </div>
 
       {/* Top Row: Stats & Pie Chart */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10 items-stretch">
         
         {/* Left Side: Number Cards */}
         <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 flex flex-col justify-center">
-            <Activity className="text-blue-500 mb-2 h-8 w-8" />
+          <div className="bg-slate-800/95 p-6 rounded-3xl border border-slate-700 flex flex-col justify-center shadow-sm">
+            <Activity className="text-cyan-400 mb-2 h-8 w-8" />
             <p className="text-slate-400 text-sm">Total Transactions</p>
             <p className="text-4xl font-bold">{data.statistics.total_transactions}</p>
           </div>
-          <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 flex flex-col justify-center">
-            <ShieldAlert className="text-red-500 mb-2 h-8 w-8" />
+          <div className="bg-slate-800/95 p-6 rounded-3xl border border-slate-700 flex flex-col justify-center shadow-sm">
+            <ShieldAlert className="text-rose-400 mb-2 h-8 w-8" />
             <p className="text-slate-400 text-sm">Total Blocked</p>
             <p className="text-4xl font-bold">{data.statistics.total_blocked}</p>
           </div>
-          <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 flex flex-col justify-center">
-            <ShieldCheck className="text-amber-500 mb-2 h-8 w-8" />
+          <div className="bg-slate-800/95 p-6 rounded-3xl border border-slate-700 flex flex-col justify-center shadow-sm">
+            <ShieldCheck className="text-amber-400 mb-2 h-8 w-8" />
             <p className="text-slate-400 text-sm">Requires Review</p>
             <p className="text-4xl font-bold">{data.statistics.total_flagged_for_review}</p>
           </div>
         </div>
 
         {/* Right Side: The Pie Chart */}
-        <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 h-[250px] flex flex-col">
-          <h3 className="text-sm font-semibold text-slate-400 mb-2">Decision Breakdown</h3>
+        <div className="bg-slate-950/90 p-6 rounded-3xl border border-slate-700 h-[280px] flex flex-col shadow-sm">
+          <h3 className="text-sm font-semibold text-slate-400 mb-3">Decision Breakdown</h3>
           <div className="flex-1 w-full h-full">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
@@ -102,7 +102,7 @@ const Dashboard = () => {
       </div>
 
       {/* Bottom Row: Transaction Table with Color Coding */}
-      <div className="bg-slate-800 rounded-xl border border-slate-700 overflow-hidden">
+      <div className="bg-slate-800/95 rounded-3xl border border-slate-700 overflow-hidden mx-auto max-w-full">
         <div className="p-6 border-b border-slate-700">
           <h2 className="text-xl font-semibold">Recent Transactions</h2>
         </div>
@@ -154,8 +154,8 @@ const Dashboard = () => {
           </table>
         </div>
       </div>
-
     </div>
+  </div>
   );
 };
 

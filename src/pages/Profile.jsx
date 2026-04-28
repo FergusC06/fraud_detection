@@ -69,14 +69,15 @@ const Profile = () => {
     }
   };
 
-  if (loading) return <div className="min-h-screen bg-slate-900 flex justify-center items-center text-white">Loading Profile...</div>;
+  if (loading) return <div className="min-h-screen bg-slate-950 flex justify-center items-center text-white">Loading Profile...</div>;
 
   return (
-    <div className="min-h-screen bg-slate-900 text-slate-100 p-8">
-      {/* Header */}
-      <div className="mb-10">
+    <div className="min-h-screen bg-slate-950 text-slate-100">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Header */}
+        <div className="mb-10">
         <h1 className="text-3xl font-bold flex items-center gap-3">
-          <User className="text-blue-500" /> Account Settings
+          <User className="text-cyan-400" /> Account Settings
         </h1>
         <p className="text-slate-400 mt-2">Manage your organization and security preferences.</p>
       </div>
@@ -93,7 +94,7 @@ const Profile = () => {
                 <p className="text-sm text-slate-400 flex items-center gap-2 mb-1">
                   <Shield size={16} /> Account Role
                 </p>
-                <p className="font-medium bg-slate-900 px-3 py-1.5 rounded inline-block text-blue-400 capitalize">
+                <p className="font-medium bg-slate-900 px-3 py-1.5 rounded inline-block text-cyan-400 capitalize">
                   {profileData?.role}
                 </p>
               </div>
@@ -138,7 +139,7 @@ const Profile = () => {
                     type="text"
                     name="merchant_name"
                     required
-                    className="appearance-none rounded-lg block w-full px-12 py-3 border border-slate-600 bg-slate-900 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="appearance-none rounded-lg block w-full px-12 py-3 border border-slate-600 bg-slate-900 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                     value={formData.merchant_name}
                     onChange={handleChange}
                   />
@@ -154,7 +155,7 @@ const Profile = () => {
                     type="email"
                     name="email"
                     required
-                    className="appearance-none rounded-lg block w-full px-12 py-3 border border-slate-600 bg-slate-900 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="appearance-none rounded-lg block w-full px-12 py-3 border border-slate-600 bg-slate-900 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                     value={formData.email}
                     onChange={handleChange}
                   />
@@ -169,7 +170,7 @@ const Profile = () => {
                   <input
                     type="password"
                     name="password"
-                    className="appearance-none rounded-lg block w-full px-12 py-3 border border-slate-600 bg-slate-900 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="appearance-none rounded-lg block w-full px-12 py-3 border border-slate-600 bg-slate-900 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                     placeholder="Leave blank to keep current password"
                     value={formData.password}
                     onChange={handleChange}
@@ -184,7 +185,7 @@ const Profile = () => {
                 <button
                   type="submit"
                   disabled={saving}
-                  className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white px-6 py-3 rounded-lg font-medium transition"
+                  className="flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 disabled:opacity-50 text-white px-6 py-3 rounded-lg font-medium transition shadow-lg shadow-cyan-500/20"
                 >
                   <Save size={18} />
                   {saving ? 'Saving...' : 'Save Changes'}
@@ -197,6 +198,7 @@ const Profile = () => {
 
       </div>
     </div>
+  </div>
   );
 };
 

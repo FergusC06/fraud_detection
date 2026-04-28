@@ -19,11 +19,14 @@ const Layout = ({ children }) => {
     <div className="flex h-screen bg-slate-900 text-slate-100 overflow-hidden">
       
       {/* Sidebar Navigation */}
-      <aside className="w-64 bg-slate-800 border-r border-slate-700 flex flex-col z-10 shadow-xl">
+      <aside className="w-72 xl:w-80 bg-slate-900/95 border-r border-slate-700 flex flex-col z-10 shadow-[0_18px_50px_-30px_rgba(15,23,42,0.9)]">
         {/* Branding */}
         <div className="p-6 flex items-center gap-3 border-b border-slate-700/50">
-          <ShieldCheck className="text-blue-500 h-8 w-8" />
-          <h2 className="text-2xl font-bold text-white tracking-tight">FraudShield</h2>
+          <ShieldCheck className="text-cyan-400 h-8 w-8" />
+          <div>
+            <h2 className="text-2xl font-bold text-white tracking-tight">FraudShield</h2>
+            <p className="text-xs text-slate-400 uppercase tracking-[0.2em] mt-1">Merchant console</p>
+          </div>
         </div>
         
         {/* Navigation Links */}
@@ -38,7 +41,7 @@ const Layout = ({ children }) => {
                 to={item.path}
                 className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all font-medium ${
                   isActive 
-                    ? 'bg-blue-600 text-white shadow-lg shadow-blue-900/20' 
+                    ? 'bg-cyan-600 text-white shadow-lg shadow-cyan-900/20' 
                     : 'text-slate-400 hover:bg-slate-700/50 hover:text-slate-100'
                 }`}
               >
@@ -62,8 +65,10 @@ const Layout = ({ children }) => {
       </aside>
 
       {/* Main Content Area - This is where your actual pages render */}
-      <main className="flex-1 overflow-y-auto bg-slate-900 relative">
-        {children}
+      <main className="flex-1 overflow-y-auto bg-slate-950 relative">
+        <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-10">
+          {children}
+        </div>
       </main>
       
     </div>
